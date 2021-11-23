@@ -7,6 +7,9 @@ jobs:
    # container: rzsolt/diploma-latex:latest
     steps:
       - uses: actions/checkout@v2
+      - name: docker build
+        run: |
+          docker build main.cpp -t rzsolt/teszt:latest
      # - run: echo 'Compiling LaTeX document...'
      # - run: make 
      # - run: echo 'Storing artifact...'
