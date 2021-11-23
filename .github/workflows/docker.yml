@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: docker build
         run: |
-          g++ -Wall main.cpp
+          g++ -Wall main.cpp \
           ./out
      # - run: echo 'Compiling LaTeX document...'
      # - run: make 
