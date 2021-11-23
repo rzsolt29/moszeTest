@@ -4,13 +4,12 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: rzsolt/teszt:latest
+    container: rzsolt/mosze:latest
     steps:
       - uses: actions/checkout@v2
       - name: docker build
         run: |
-          g++ -Wall Spreadsheet.cpp Table.cpp Command.cpp \
-          ./a.out
+          g++ -v
      # - run: echo 'Compiling LaTeX document...'
      # - run: make 
      # - run: echo 'Storing artifact...'
