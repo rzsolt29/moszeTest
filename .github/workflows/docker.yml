@@ -9,7 +9,9 @@ jobs:
       - uses: actions/checkout@v2
       - name: docker build
         run: |
-          g++ -v
+          cd CRL \
+          g++ -Wall Spreadsheet.cpp Table.cpp Command.cpp \
+          ./a.out
      # - run: echo 'Compiling LaTeX document...'
      # - run: make 
      # - run: echo 'Storing artifact...'
