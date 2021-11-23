@@ -10,7 +10,7 @@ jobs:
       - name: docker build
         run: |
           g++ -Wall main.cpp \
-          ./out
+          ./a.out
      # - run: echo 'Compiling LaTeX document...'
      # - run: make 
      # - run: echo 'Storing artifact...'
