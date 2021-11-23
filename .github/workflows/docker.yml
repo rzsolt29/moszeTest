@@ -4,12 +4,12 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-   # container: rzsolt/diploma-latex:latest
+    container: rzsolt/teszt:latest
     steps:
       - uses: actions/checkout@v2
       - name: docker build
         run: |
-          docker build main.cpp -t rzsolt/teszt:latest
+          g++ main.cpp
      # - run: echo 'Compiling LaTeX document...'
      # - run: make 
      # - run: echo 'Storing artifact...'
