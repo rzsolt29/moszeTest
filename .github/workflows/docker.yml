@@ -4,12 +4,13 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: rzsolt/mosze:latest
+    container: rzsolt/git-pub:latest
     steps:
       - uses: actions/checkout@v2
       - name: docker build
         run: |
-          g++ -v
+          g++ -v \
+          valgrind --version
      # - run: echo 'Compiling LaTeX document...'
      # - run: make 
      # - run: echo 'Storing artifact...'
